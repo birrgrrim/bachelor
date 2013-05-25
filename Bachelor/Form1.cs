@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using CVKMeans;
 using CVMeanshift;
+using System.Threading;
 
 namespace Bachelor
 {
@@ -23,8 +24,12 @@ namespace Bachelor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _kMeans = new KMeans(source_bmp, 3, ImageProcessor.Colour.Types.RGB);
-
+            _kMeans = new KMeans(source_bmp, 2, ImageProcessor.Colour.Types.RGB);
+            while (!_kMeans.Converged)
+            {
+                _kMeans.Iterate();
+            }
+            seg_bmp = _kMeans.ProcessedImage;
             picturebox2_bmp = new Bitmap(seg_bmp,
                     ImageUtils.GenerateImageDimensions(seg_bmp.Width, seg_bmp.Height, pictureBox2.Width, pictureBox2.Height));
             pictureBox2.Image = picturebox2_bmp;
@@ -32,14 +37,13 @@ namespace Bachelor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            openFileDialog1.Filter = "IMAGES |*.jpg;*.bmp";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 source_bmp = new Bitmap(openFileDialog1.FileName);
                 picturebox1_bmp = new Bitmap(source_bmp,
                     ImageUtils.GenerateImageDimensions(source_bmp.Width, source_bmp.Height, pictureBox1.Width, pictureBox1.Height));
                 pictureBox1.Image = picturebox1_bmp;
-                //progressBar1.Maximum = source_bmp.Width * source_bmp.Height;
             }
         }
     }
