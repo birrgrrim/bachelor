@@ -19,8 +19,9 @@ namespace Bachelor
             InitializeComponent();
         }
 
-        Bitmap source_bmp, picturebox1_bmp, seg_bmp, picturebox2_bmp;
+        Bitmap source_bmp, picturebox1_bmp, seg_bmp, picturebox2_bmp, brd_bmp, picturebox3_bmp;
         KMeans _kMeans;
+        SegmentationUtils.ISegmentator filter = new SegmentationUtils.EdgeDetector.Sobol();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,6 +46,14 @@ namespace Bachelor
                     ImageUtils.GenerateImageDimensions(source_bmp.Width, source_bmp.Height, pictureBox1.Width, pictureBox1.Height));
                 pictureBox1.Image = picturebox1_bmp;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            brd_bmp = filter.Segmentate(ImageUtils.MakeGrayscale(seg_bmp));
+            picturebox3_bmp = new Bitmap(brd_bmp,
+                    ImageUtils.GenerateImageDimensions(brd_bmp.Width, brd_bmp.Height, pictureBox3.Width, pictureBox3.Height));
+            pictureBox3.Image = picturebox3_bmp;
         }
     }
 }

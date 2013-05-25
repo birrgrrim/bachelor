@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bachelor", "Bachelor\Bachel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVKMeans", "CVKMeans\CVKMeans.csproj", "{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegmentationUtils", "SegmentationUtils\SegmentationUtils.csproj", "{C4C3E1B3-8308-4D9E-BA0A-EEB5D3BFA306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C3E1B3-8308-4D9E-BA0A-EEB5D3BFA306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C3E1B3-8308-4D9E-BA0A-EEB5D3BFA306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C3E1B3-8308-4D9E-BA0A-EEB5D3BFA306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C3E1B3-8308-4D9E-BA0A-EEB5D3BFA306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
