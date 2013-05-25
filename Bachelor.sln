@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bachelor", "Bachelor\Bachelor.csproj", "{7C0A5400-F02B-491B-B457-8992D646C190}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVKMeans", "..\CVKMeans\CVKMeans\CVKMeans.csproj", "{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVKMeans", "CVKMeans\CVKMeans.csproj", "{7A23277D-B480-4BEF-AA6B-C1CF22A31FC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

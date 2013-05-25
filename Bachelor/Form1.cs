@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CVKMeans;
+using CVMeanshift;
 
 namespace Bachelor
 {
@@ -17,6 +19,7 @@ namespace Bachelor
         }
 
         Bitmap source_bmp, picturebox1_bmp, seg_bmp, picturebox2_bmp;
+        KMeans _kMeans;
 
         private void button1_Click(object sender, EventArgs e)
         {
